@@ -1,0 +1,14 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scripts/UI/Style/MainMenu.uss?fileID=7433441132597879392&amp;guid=101c38a5e189de141b440847669ef68a&amp;type=3#MainMenu" />
+    <ui:TabView enabled="true">
+        <ui:Tab label="Tab" class="main-menu-tab">
+            <ui:VisualElement name="main-menu">
+                <ui:Label text="Game" name="title" />
+                <ui:Button text="Host" name="host-button" class="main-menu-button" />
+                <ui:Button text="Join" name="join-button" class="main-menu-button" />
+                <ui:Button text="Quit" name="quit-button" class="main-menu-button" />
+            </ui:VisualElement>
+        </ui:Tab>
+        <ui:Tab label="Tab" />
+    </ui:TabView>
+</ui:UXML>

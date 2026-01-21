@@ -1,0 +1,48 @@
+.unity-tab-view {
+    height: 100%;
+}
+
+.unity-tab-view > #unity-tab-view__content-container {
+    height: 100%;
+}
+
+#unity-tab-view__header-container {
+    display: none;
+}
+
+.unity-tab {
+    height: 100%;
+}
+
+.unity-tab > #unity-tab__content-container {
+    height: 100%;
+}
+
+.main-menu-tab > #unity-tab__content-container {
+    justify-content: center;
+}
+
+#main-menu {
+    width: 25%;
+    left: 2%;
+    height: auto;
+}
+
+#title {
+    -unity-text-align: upper-center;
+    font-size: 42px;
+    margin-bottom: 30px;
+    -unity-font-style: bold;
+}
+
+.main-menu-button {
+    margin-bottom: 10px;
+    font-size: 18px;
+    width: 80%;
+    align-self: center;
+    height: auto;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
+}
