@@ -1,13 +1,13 @@
-using FishNet.Example.CustomSyncObject;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UIElements;
+using DaanBanaan.Networking;
 
 namespace DaanBanaan.UI.Behaviour
 {
     public class MainMenuUI : UIBehaviour
     {
+        [SerializeField] private SessionEventsSO sessionEvents;
+
         #region [UI Elements]
         private TabView _tabView;
         private Tab _mainMenu;
@@ -17,6 +17,13 @@ namespace DaanBanaan.UI.Behaviour
 
         private Toggle _privacyToggle;
         private TextField _passwordField;
+
+        private Button _hostSessionButton;
+
+        private TextField _ipField;
+
+        private Button _joinSessionButton;
+
         #endregion
 
         private void Awake()
@@ -33,6 +40,12 @@ namespace DaanBanaan.UI.Behaviour
 
             _passwordField = _hostingTab.Q<TextField>();
             _passwordField.SetEnabled(_privacyToggle.value);
+
+            _hostSessionButton = _hostingTab.Q<Button>("host-tab__host-button");
+
+            _ipField = _joiningTab.Q<TextField>();
+
+            _joinSessionButton = _joiningTab.Q<Button>("join-tab__join-button");
         }
 
         private void OnEnable()
@@ -41,6 +54,11 @@ namespace DaanBanaan.UI.Behaviour
 
             _hostTabButton.clicked += OpenHostingTab;
             _joinTabButton.clicked += OpenJoiningTab;
+
+            _hostSessionButton.clicked += HostSession;
+            _joinSessionButton.clicked += JoinSession;
+
+            sessionEvents.SessionErrorEvent += OnSessionError;
         }
 
         private void OnDisable()
@@ -49,11 +67,30 @@ namespace DaanBanaan.UI.Behaviour
 
             _hostTabButton.clicked -= OpenHostingTab;
             _joinTabButton.clicked -= OpenJoiningTab;
+
+            _hostSessionButton.clicked -= HostSession;
+            _joinSessionButton.clicked -= JoinSession;
+
+            sessionEvents.SessionErrorEvent -= OnSessionError;
         }
 
         private void OnSessionPrivacyChanged(ChangeEvent<bool> privacy)
         {
             _passwordField.SetEnabled(privacy.newValue);
+        }
+
+        private void HostSession()
+        {
+            sessionEvents.OnHostSession();
+        }
+        private void JoinSession()
+        {
+            sessionEvents.OnJoinSession(_ipField.value);
+        }
+
+        private void OnSessionError(SessionEventsSO.SessionError error)
+        {
+            Debug.LogError("A Session Error Occured!");
         }
 
         #region [Tab Opening Methods]

@@ -9,23 +9,23 @@
                 <ui:Button text="Quit" name="main-menu__quit-button" class="main-menu-button" />
             </ui:VisualElement>
         </ui:Tab>
-        <ui:Tab label="Tab" class="hosting-tab">
-            <ui:VisualElement name="hosting-tab" class="server-tab">
+        <ui:Tab label="Tab" class="host-tab">
+            <ui:VisualElement name="host-tab" class="server-tab">
                 <ui:Label text="Host Session" class="server-tab-title" />
                 <ui:VisualElement class="session-settings" style="flex-grow: 1;">
                     <ui:Toggle label="Private Session:" value="false" />
                     <ui:TextField label="Password:" placeholder-text="Enter Password..." />
                 </ui:VisualElement>
-                <ui:Button text="Start Hosting" class="start-session-button" />
+                <ui:Button text="Start Hosting" name="host-tab__host-button" class="start-session-button" />
             </ui:VisualElement>
         </ui:Tab>
-        <ui:Tab label="Tab" class="hosting-tab">
-            <ui:VisualElement name="joining-tab" class="server-tab">
+        <ui:Tab label="Tab" class="host-tab">
+            <ui:VisualElement name="join-tab" class="server-tab">
                 <ui:Label text="Join Session" class="server-tab-title" />
                 <ui:VisualElement class="session-settings" style="flex-grow: 1;">
                     <ui:TextField label="IP:" placeholder-text="Enter IP..." />
                 </ui:VisualElement>
-                <ui:Button text="Join Session" class="start-session-button" />
+                <ui:Button text="Join Session" name="join-tab__join-button" class="start-session-button" />
             </ui:VisualElement>
         </ui:Tab>
     </ui:TabView>

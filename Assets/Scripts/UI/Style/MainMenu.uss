@@ -56,11 +56,11 @@
     -unity-font-style: bold;
 }
 
-.hosting-tab {
+.host-tab {
     justify-content: center;
 }
 
-.hosting-tab > #unity-tab__content-container {
+.host-tab > #unity-tab__content-container {
     align-self: auto;
     align-items: center;
 }
