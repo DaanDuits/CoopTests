@@ -4,9 +4,9 @@
         <ui:Tab label="Tab" class="main-menu-tab">
             <ui:VisualElement name="main-menu">
                 <ui:Label text="Game" name="title" />
-                <ui:Button text="Host" name="host-button" class="main-menu-button" />
-                <ui:Button text="Join" name="join-button" class="main-menu-button" />
-                <ui:Button text="Quit" name="quit-button" class="main-menu-button" />
+                <ui:Button text="Host" name="main-menu__host-button" class="main-menu-button" />
+                <ui:Button text="Join" name="main-menu__join-button" class="main-menu-button" />
+                <ui:Button text="Quit" name="main-menu__quit-button" class="main-menu-button" />
             </ui:VisualElement>
         </ui:Tab>
         <ui:Tab label="Tab" class="hosting-tab">
