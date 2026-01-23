@@ -29,9 +29,9 @@ namespace DaanBanaan.UI.Behaviour
             _hostTabButton = _mainMenu.Q<Button>("main-menu__host-button");
             _joinTabButton = _mainMenu.Q<Button>("main-menu__join-button");
 
-            _privacyToggle = _joiningTab.Q<Toggle>();
+            _privacyToggle = _hostingTab.Q<Toggle>();
 
-            _passwordField = _joiningTab.Q<TextField>();
+            _passwordField = _hostingTab.Q<TextField>();
             _passwordField.SetEnabled(_privacyToggle.value);
         }
 
