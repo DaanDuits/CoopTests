@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 442777100}
   - component: {fileID: 442777099}
   - component: {fileID: 442777103}
+  - component: {fileID: 442777105}
   - component: {fileID: 442777104}
   m_Layer: 0
   m_Name: Networking
@@ -245,6 +246,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DaanBanaan.Networking.SessionHandler
   sessionEvents: {fileID: 11400000, guid: d88d2f5c0a9160745b759832a763d94b, type: 2}
+--- !u!114 &442777105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 442777097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f48f002b825cbd45a19bd96d90f9edb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: FishNet.Runtime::FishNet.Transporting.Tugboat.Tugboat
+  _stopSocketsOnThread: 0
+  _dontRoute: 0
+  _reuseAddress: 0
+  _unreliableMtu: 1023
+  _ipv4BindAddress: 
+  _enableIpv6: 1
+  _ipv6BindAddress: 
+  _port: 7770
+  _maximumClients: 2
+  _clientAddress: localhost
 --- !u!1 &884449374
 GameObject:
   m_ObjectHideFlags: 0

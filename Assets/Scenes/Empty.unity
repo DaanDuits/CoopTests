@@ -128,8 +128,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 70627464}
-  - component: {fileID: 70627463}
   - component: {fileID: 70627462}
+  - component: {fileID: 70627463}
   m_Layer: 0
   m_Name: SceneLoader
   m_TagString: Untagged
