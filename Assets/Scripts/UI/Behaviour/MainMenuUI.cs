@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UIElements;
 using DaanBanaan.Networking;
+using UnityEngine.InputSystem;
 
 namespace DaanBanaan.UI.Behaviour
 {
@@ -23,9 +24,8 @@ namespace DaanBanaan.UI.Behaviour
         private TextField _ipField;
 
         private Button _joinSessionButton;
-
         #endregion
-
+        
         private void Awake()
         {
             _tabView = RootVisualElement.Q<TabView>();

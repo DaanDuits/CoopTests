@@ -3,9 +3,8 @@ using FishNet.Managing.Scened;
 using FishNet.Connection;
 using FishNet.Object;
 using FishNet.Transporting;
-using FishNet;
 
-namespace DaanBanaan
+namespace DaanBanaan.SceneManagement
 {
     public class SceneLoader : NetworkBehaviour
     {
@@ -15,7 +14,7 @@ namespace DaanBanaan
         {
             base.OnStartServer();
 
-            ServerManager.OnRemoteConnectionState += OnRemoteConnectionState;
+            ServerManager.OnRemoteConnectionState += OnRemoteConnectionState;           
         }
 
         private void OnRemoteConnectionState(NetworkConnection conn, RemoteConnectionStateArgs args)
@@ -24,7 +23,7 @@ namespace DaanBanaan
             {
                 int id = conn.ClientId;
                 SceneLoadData sld = new SceneLoadData(sceneNames[id]);
-                InstanceFinder.SceneManager.LoadConnectionScenes(conn, sld);
+                SceneManager.LoadConnectionScenes(conn, sld);
             }
         }
     }
